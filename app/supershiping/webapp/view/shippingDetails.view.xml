@@ -1,0 +1,56 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    controllerName="supershiping.supershiping.controller.shippingDetails"
+>
+    <Page title="Item Selection">
+        <l:VerticalLayout width="100%">
+            <FlexBox height="300px" alignItems="Center" justifyContent="Center">
+                <FlexBox width="20%">
+                    <RadioButtonGroup id="categorySelection" columns="1">
+                        <buttons>
+                            <RadioButton text="Books &amp; Documents" />
+                            <RadioButton text="Clothes &amp; Personal Items" />
+                            <RadioButton text="Consumables" />
+                            <RadioButton text="Electronics" />
+                            <RadioButton text="Household Items" />
+                            <RadioButton text="Breakable Items" />
+                            <RadioButton text="Sports Equipments" />
+                        </buttons>
+                    </RadioButtonGroup>
+                </FlexBox>
+                <FlexBox width="20%">
+                    <RadioButtonGroup id="packingSelection" columns="1">
+                        <buttons>
+                            <RadioButton text="Docs/Envelope" />
+                            <RadioButton text="Pouch/Plastic" />
+                            <RadioButton text="Bag/Shoe Box" />
+                            <RadioButton text="Carton/Suitcase" />
+                        </buttons>
+                    </RadioButtonGroup>
+                </FlexBox>
+                <FlexBox width="20%" alignItems="Start" justifyContent="Start">
+                    <Select id="weightSelection">
+                        <core:Item key="1-500g" text="1-500 grams" />
+                        <core:Item key="500g-2kg" text="500 grams - 2 kilograms" />
+                        <core:Item key="2kg-5kg" text="2 kilograms - 5 kilograms" />
+                        <core:Item key="5kg-50kg" text="5 kilograms - 50 kilograms" />
+                    </Select>
+                </FlexBox>
+                <FlexBox width="20%" direction="Column" justifyContent="Start" alignItems="Start">
+                    <Label text="Length (cm)" labelFor="lengthInput" />
+                    <Input id="lengthInput" placeholder="Length (cm)" />
+                    <Label text="Breadth (cm)" labelFor="breadthInput" />
+                    <Input id="breadthInput" placeholder="Breadth (cm)" />
+                    <Label text="Height (cm)" labelFor="heightInput" />
+                    <Input id="heightInput" placeholder="Height (cm)" />
+                    <Label text="Weight (kg)" labelFor="weightInput" />
+                    <Input id="weightInput" placeholder="Weight (kg)" />
+                </FlexBox>
+            </FlexBox>
+            <Button text="Next" press="onNextPress" />
+        </l:VerticalLayout>
+    </Page>
+</mvc:View>
